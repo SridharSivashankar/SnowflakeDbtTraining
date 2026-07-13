@@ -40,6 +40,6 @@ models:
     +materialized: table
     # Applies to all files under models/example/
     staging:
-      +schema: staging
+      +schema: '{{ env_var("DBT_SILVER_SCHEMA","DBT_SSIVASHANKAR") }}'
     example:
       +materialized: table
