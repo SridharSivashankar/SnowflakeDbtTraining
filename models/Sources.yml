@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: sample
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF1
+    config:      
+      freshness:
+        warn_after:
+          count: 24
+          period: hour
+    tables:
+      - name: customer
+        description: One record per person who has purchased one or more items
+      - name: orders
+        description: One record per order (consisting of one or more order items)
+ 
