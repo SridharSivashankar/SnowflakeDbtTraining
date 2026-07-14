@@ -1,3 +1,6 @@
+{{ config(schema='harsha') }}
+
+
 with 
 
 source as (
@@ -9,8 +12,8 @@ source as (
 renamed as (
 
     select
-        c_custkey,
-        c_name,
+        c_custkey as Customer_ID,
+        c_name as n_ame,
         c_address,
         c_nationkey,
         c_phone,
